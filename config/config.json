@@ -1,0 +1,8 @@
+{
+    "storage_account": "datalakealexvidal",
+    "storage_container": "raw-data",
+    "sql_server": "alex-sql-server-1.database.windows.net",
+    "sql_database": "sales_data_db",
+    "sql_user": "alexvidi",
+    "sql_password": "Alexvidal8509"
+}
