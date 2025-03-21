@@ -2,7 +2,7 @@
 
 **Overview**
 
-This project implements a robust ETL pipeline using Azure cloud services to process and analyze sales data. The solution leverages Azure Data Lake Storage, Azure SQL Database, and Python-based processing to create a scalable, enterprise-grade data solution.
+This project implements a scalable ETL pipeline using Azure cloud services to process and analyze sales data. The solution leverages Azure Data Lake Storage (ADLS Gen2) for efficient data storage, Azure SQL Database for structured data management, and Python for data transformation using Pandas and PyODBC. SQL queries executed in Azure Query Editor enable insightful analysis of sales trends. Designed for enterprise scalability, this solution follows cloud-based data engineering best practices, with potential enhancements like Azure Data Factory automation and Power BI visualization.
 
 **Azure Services Used**
 
@@ -35,7 +35,7 @@ This project implements a robust ETL pipeline using Azure cloud services to proc
 **Project Structure**
 
 ```
-azure-data-engineering/
+AZURE_SALES_ETL_PIPELINE/
 ├── config/               # Configuration files
 │   ├── config.json       # Project configuration file
 │
@@ -81,7 +81,7 @@ azure-data-engineering/
 1️ **Clone the repository:**
 
 ```bash
-git clone [https://github.com/your-repo/azure-data-engineering.git](https://github.com/your-repo/azure-data-engineering.git)
+git clone [https://github.com/alexvidi/Cloud-ETL-Pipeline-Azure-SQL-DataLakeStorage.git)
 cd azure-data-engineering
 ```
 ##  How to Use
