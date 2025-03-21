@@ -75,5 +75,38 @@ azure-data-engineering/
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 ```
-
 ---
+##  How to Use
+
+1️ **Clone the repository:**
+
+```bash
+git clone [https://github.com/your-repo/azure-data-engineering.git](https://github.com/your-repo/azure-data-engineering.git)
+cd azure-data-engineering
+
+## 📌 How to Use
+
+1️ **Clone the repository:**
+
+```bash
+git clone [https://github.com/your-repo/azure-data-engineering.git](https://github.com/your-repo/azure-data-engineering.git)
+cd azure-data-engineering
+
+2️ **Install dependencies:**
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+pip install -r requirements.txt
+
+3️ **Run the ETL pipeline:**
+
+```bash
+python src/etl/upload_to_blob.py  # Upload data to Azure Data Lake Storage
+python src/etl/extract.py         # Extract data from Data Lake Storage
+python src/etl/transform.py       # Transform data
+python src/etl/load_sql.py        # Load into Azure SQL Database
+
+## Author
+
+ Alexandre Vidal De Palol
