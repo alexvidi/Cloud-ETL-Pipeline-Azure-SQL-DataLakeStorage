@@ -30,9 +30,11 @@ This project implements a robust ETL pipeline using Azure cloud services to proc
     * Generate reports and visualizations
     * Support data-driven decision making
 
+---
+
 **Project Structure**
 
----
+```
 azure-data-engineering/
 ├── config/               # Configuration files
 │   ├── config.json       # Project configuration file
@@ -72,3 +74,6 @@ azure-data-engineering/
 ├── .env                  # Environment variables (excluded from Git)
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
+```
+
+---
