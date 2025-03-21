@@ -75,7 +75,7 @@ azure-data-engineering/
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 ```
----
+
 ##  How to Use
 
 1️ **Clone the repository:**
@@ -84,7 +84,7 @@ azure-data-engineering/
 git clone [https://github.com/your-repo/azure-data-engineering.git](https://github.com/your-repo/azure-data-engineering.git)
 cd azure-data-engineering
 
-## 📌 How to Use
+##  How to Use
 
 1️ **Clone the repository:**
 
