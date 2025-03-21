@@ -43,4 +43,3 @@ azure-data-engineering/
 ├── .env                # Environment variables (excluded from Git)
 ├── requirements.txt    # Python dependencies
 └── README.md           # Project documentation
----
