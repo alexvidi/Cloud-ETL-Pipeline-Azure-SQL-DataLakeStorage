@@ -1,45 +1,74 @@
-#  Azure Data Engineering Project
+# Azure Data Engineering Project
 
- **Overview**
+**Overview**
 
-This project demonstrates an ETL pipeline using Azure services to process and analyze sales data. It integrates Azure Data Lake Storage (ADLS Gen2), Azure SQL Database, and SQL queries to create a scalable data solution.
+This project implements a robust ETL pipeline using Azure cloud services to process and analyze sales data. The solution leverages Azure Data Lake Storage, Azure SQL Database, and Python-based processing to create a scalable, enterprise-grade data solution.
 
- **Azure Services Used**
+**Azure Services Used**
 
-* Azure Data Lake Storage (ADLS Gen2) → Stores raw and processed data efficiently.
-* Azure SQL Database → Centralized storage for structured data.
-* Azure Query Editor → Executes SQL queries for analysis.
-* Python (Pandas, PyODBC) → Handles ETL processes.
+* Azure Data Lake Storage (ADLS Gen2) - Hierarchical storage for raw and processed data files
+* Azure SQL Database - Managed relational database for structured data storage and querying
+* Azure Query Editor - Interactive tool for executing SQL queries and analysis
+* Python Ecosystem - Pandas, PyODBC, and other libraries for ETL operations
 
- **ETL Process**
+**ETL Process**
 
-1.  **Extract** → Download raw data from Azure Data Lake Storage.
-2.  **Transform** → Clean and preprocess data using Python.
-3.  **Load** → Insert processed data into Azure SQL Database.
-4.  **Analyze** → Run SQL queries to generate insights.
+1.  **Extract**
+    * Download raw data from Azure Data Lake Storage
+    * Connect to source systems using secure authentication
+    * Validate data integrity during extraction
+2.  **Transform**
+    * Clean and preprocess data using Python and Pandas
+    * Handle missing values, outliers, and data type conversions
+    * Standardize formats and apply business rules
+3.  **Load**
+    * Insert processed data into Azure SQL Database
+    * Maintain data lineage and versioning
+    * Optimize for query performance
+4.  **Analyze**
+    * Execute SQL queries for business insights
+    * Generate reports and visualizations
+    * Support data-driven decision making
 
- **Project Structure**
+**Project Structure**
 
 ---
 azure-data-engineering/
-├── data/               # Raw & processed datasets
-│   ├── raw/            # Raw data files
-│   ├── processed/      # Processed data files
+├── config/               # Configuration files
+│   ├── config.json       # Project configuration file
 │
-├── queries/            # SQL queries for analysis
-├── results/            # Exported query results
-├── src/
-│   ├── etl/            # Python ETL scripts
-│   │   ├── extract.py  # Extract data from Azure Data Lake Storage
+├── data/                 # Raw & processed datasets
+│   ├── raw/              # Raw data files
+│   ├── processed/        # Processed data files
+│
+├── queries/              # SQL queries for analysis
+│   ├── average_sales_price_order.sql  # SQL query for avg sales per order
+│   ├── best-selling_product_quantity.sql  # Query for top-selling product
+│   ├── total_quantity_sold_month.sql  # Query for total monthly sales
+│
+├── results/              # Exported query results
+│   ├── average_sales_order.csv
+│   ├── best_selling_product.csv
+│   ├── total_quantity_month.csv
+│
+├── src/                  # Source code
+│   ├── etl/              # Python ETL scripts
+│   │   ├── extract.py    # Extract data from Azure Data Lake Storage
 │   │   ├── transform.py  # Clean and preprocess data
-│   │   ├── load_sql.py  # Load data into Azure SQL Database
+│   │   ├── load_sql.py   # Load data into Azure SQL Database
 │   │   ├── upload_to_blob.py  # Upload data to Data Lake Storage
 │
-├── images_azure/       # Screenshots of SQL analysis
-├── config/             # Configuration files
-├── tests/              # Unit tests for Blob Storage and SQL
-├── venv/               # Virtual environment (excluded from Git)
-├── .gitignore          # Git ignore file
-├── .env                # Environment variables (excluded from Git)
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
+├── images_azure/         # Screenshots of SQL analysis
+│   ├── Average_sales_price_order.png
+│   ├── Best-selling_product_quantity.png
+│   ├── Total_quantity_sold_per_month.png
+│
+├── tests/                # Unit tests for Blob Storage and SQL
+│   ├── test_blob.py       # Tests for Blob Storage functionality
+│   ├── test_sql.py        # Tests for Azure SQL connection
+│
+├── venv/                 # Virtual environment (excluded from Git)
+├── .gitignore            # Git ignore file
+├── .env                  # Environment variables (excluded from Git)
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
